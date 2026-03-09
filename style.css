@@ -2,52 +2,90 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
+font-family:Segoe UI;
 }
 
 body{
+
 height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+
+background:linear-gradient(270deg,#ff9a9e,#fad0c4,#fad0c4,#ffdde1);
+background-size:600% 600%;
+
+animation:fondo 10s ease infinite;
+
 overflow:hidden;
 }
 
-.container{
+/* fondo animado */
+
+@keyframes fondo{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+.card{
+
 background:white;
 padding:40px;
 border-radius:20px;
+box-shadow:0 20px 40px rgba(0,0,0,0.2);
+
 text-align:center;
-box-shadow:0 15px 40px rgba(0,0,0,0.2);
+
+width:380px;
+
 }
 
 h1{
-margin-bottom:20px;
+
 color:#ff4d6d;
+margin-bottom:20px;
+
 }
 
-.imagen{
-width:250px;
+.foto{
+
+width:100%;
 border-radius:15px;
-margin-bottom:20px;
+margin-bottom:25px;
+
+}
+
+.botones{
+
+display:flex;
+justify-content:center;
+gap:20px;
+
 }
 
 button{
-padding:14px 30px;
+
+padding:14px 28px;
 font-size:18px;
 border:none;
 border-radius:10px;
 cursor:pointer;
-position:absolute;
+
 }
 
 #si{
+
 background:#ff4d6d;
 color:white;
-position:relative;
+
 }
 
 #no{
+
 background:#ccc;
+position:absolute;
+
 }
